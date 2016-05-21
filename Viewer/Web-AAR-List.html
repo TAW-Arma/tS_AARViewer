@@ -2,7 +2,7 @@
 <html lang="us">
 	<head>
 		<meta charset="utf-8">
-		<title>Боевые операции Tactical Shift</title>
+		<title>List of web stored combat operations</title>
 		
 		<link rel="stylesheet" href="src/css/jquery-ui.css">
 		<link rel="stylesheet" href="src/css/baarv_viewer.css">
@@ -84,7 +84,7 @@
 			
 			function showNoItems() {
 				$( "#wrapper" ).append(
-					"<div class='item'><div class='line4'>Нет данных для отображения</div></div>"
+					"<div class='item'><div class='line4'>No data to display</div></div>"
 				);	
 			};
 			
@@ -102,7 +102,7 @@
 							+ "<div class='line2'>" + aarConfig[i].date
 							+ "</div><div class='line4'>" + aarConfig[i].title
 							+ "</div><div class='line2'>" + aarConfig[i].terrain
-							+ "</div><div class='line2'><div class='btn' onClick='openFromList(" + i + ")'>► Показать</div></div>"
+							+ "</div><div class='line2'><div class='btn' onClick='openFromList(" + i + ")'>► Play</div></div>"
 							+ "</div>"					
 						);				
 					};
@@ -113,7 +113,7 @@
 	<body>
 		<div id="header">
 			<div id="header-title">
-				<span>tS</span> <tt id='header-sans'>Боевые операции</tt>
+				<span>tS</span> <tt id='header-sans'>Combat operations</tt>
 			</div>
 		</div>
 		

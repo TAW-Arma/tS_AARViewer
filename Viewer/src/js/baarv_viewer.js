@@ -364,27 +364,39 @@ function playReportStep (step) {
 	$( ".panzoom" ).panzoom('resetDimensions');
 };
 
+
+$(document).ready(function(){
+	$("#player-speed").on("change selectmenuchange", function(){
+		if (aarPlaying) {
+			playReport();
+		}
+	});
+});
 // Play AAR in auto mode
 function playReportAuto () {
 	if (!aarPlaying) {
-		stertReport();
-		aarAutoStepper = setInterval(
-			function () {
-				if (aarCurrentTime != aarData.metadata.time) {				
-					reportNextStep();
-				} else {
-					clearInterval( aarAutoStepper );
-					stopReport();
-				}
-			}
-			, 2000/( $( "#player-speed" ).val() )
-		);
+		playReport();
 	} else {
 		stopReport();
 	}
 };
 
-function stertReport() {
+function playReport() {
+	startReport();
+	aarAutoStepper = setInterval(
+		function () {
+			if (aarCurrentTime != aarData.metadata.time) {				
+				reportNextStep();
+			} else {
+				clearInterval( aarAutoStepper );
+				stopReport();
+			}
+		}
+		, 2000/( $( "#player-speed" ).val() )
+	);
+}
+
+function startReport() {
 	aarPlaying = true;
 	$( "#player-step-play" ).button( "option", { label: "pause", icons: {primary: "ui-icon-pause"} });
 	clearInterval( aarAutoStepper );

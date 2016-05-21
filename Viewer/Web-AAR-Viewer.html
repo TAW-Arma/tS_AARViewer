@@ -36,7 +36,7 @@
 					aarData = aarFileData;
 					showAARDetails();
 					setTimeout( function() {
-					$( "#header-status-text" ).html( "Готово!" );
+					$( "#header-status-text" ).html( "Done!" );
 						setTimeout( function() {
 							$( "#header-status-text" ).html( "" );
 						} , 1500);
@@ -79,9 +79,9 @@
 				<!--
 					<input type='file' name='uploader' id="uploader" accept='.txt' onchange='openFile(event)'>	
 					<label id="header-status-text">Select AAR file to play...</label>	
-				-->
-				<label id="header-choose-file-btn" class="header-btn" onClick="goToList()">< Назад</label>
-				<label id="header-status-text">Загрузка...</label>
+				-->				
+				<label id="header-choose-file-btn" class="header-btn" onClick="goToList()">< Back to list</label>
+				<label id="header-status-text">Playing AAR file...</label>
 			</div>
 		</div>
 		
@@ -89,25 +89,25 @@
 			<ul>
 				<li>
 					<div class="dl-1">
-						Миссия
+						Mission name
 					</div>
 					<div class="dl-2" id="mission-name" />
 				</li>
 				<li>
 					<div class="dl-1">
-						Местность
+						Island
 					</div>
 					<div class="dl-2" id="mission-island" />
 				</li>
 				<li>
 					<div class="dl-1">
-						Дата
+						Date
 					</div>
 					<div class="dl-2" id="mission-date" />
 				</li>
 				<li>
 					<div class="dl-1">
-						Длительность
+						Duration
 					</div>
 					<div class="dl-2">
 						<div id="mission-time" />
@@ -115,23 +115,23 @@
 				</li>
 				<li>
 					<div class="dl-1">
-						Описание:
+						Description:
 					</div>
 					<div class="dl-3" id="mission-desc" ></div>
 				</li>				
 				<li>
 					<div class="dl-1">
-						<h4>Игроки</h4>
+						<h4>Players</h4>
 					</div>
 					<ul id="player-list"></ul>
 				</li>
 				<br /><hr />				
 				<li>
-					<div class="start-btn" onClick="initAAR()">► СМОТРЕТЬ</div>
+					<div class="start-btn" onClick="initAAR()">► Play</div>
 				</li>
 				<li>
 					<div id="icon-src-switcher" onClick="toggleIconSrc()"><span id="icon-src-switcher-pin">|</span><label>SVG</label></div>
-					<span id='note'>* Формат файлов иконок (используйте, если иконки не отображаются)</span>
+					<span id='note'>* change icon file format (use if unit icons are not displayed)</span>
 				</li>
 			</ul>
 		</div>

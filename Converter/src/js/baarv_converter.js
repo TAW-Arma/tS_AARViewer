@@ -1,7 +1,7 @@
 var eStyle = {
 	"headerStatus": {
 		"default": {
-			"text": "Open RPT file to convert...",
+			"text": "Open RPT file to convert to ARP...",
 			"bgColor": "#5a5a5a"			
 		},
 		"success": {
