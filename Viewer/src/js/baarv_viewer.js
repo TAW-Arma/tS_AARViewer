@@ -392,7 +392,7 @@ function playReport() {
 				stopReport();
 			}
 		}
-		, 2000/( $( "#player-speed" ).val() )
+		, 1000/( $( "#player-speed" ).val() )
 	);
 }
 
